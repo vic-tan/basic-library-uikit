@@ -1,0 +1,16 @@
+<resources>
+    <string name="font_family">sans-serif-light</string><!--字体样式-->
+
+    <!-- —————————————————— 对话框按钮文字 ——————————————————————————————— -->
+    <string name="common_prompt_dialog_default_title">温馨提示</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_enter">确定</string>
+    <string name="common_continue">继续</string>
+
+    <!-- —————————————————— app 版本升级 ——————————————————————————————— -->
+    <string name="auto_update_new_update_available">发现新版本</string>
+    <string name="auto_update_new_update_available_content">发现新版本%1$s,是否下载更新?</string>
+    <string name="auto_update_dialog_positive_button">立即下载</string>
+    <string name="auto_update_dialog_negative_button">@string/common_cancel</string>
+
+</resources>

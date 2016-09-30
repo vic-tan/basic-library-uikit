@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical">
+
+    <com.tlf.basic.uikit.viewpager.ChildViewPager
+        android:id="@+id/vp_banner"
+        android:layout_width="match_parent"
+        android:layout_height="550px"/>
+
+    <com.tlf.basic.uikit.viewpager.CircleIndicator
+        android:id="@+id/indicator"
+        android:background="#38000000"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        app:ci_animator="@anim/scale_with_alpha"
+        app:ci_drawable="@drawable/green_radius"
+        app:ci_drawable_unselected="@drawable/white_radius"/>
+</RelativeLayout>

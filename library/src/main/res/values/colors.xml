@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- ————————————————————————————————————— kprogresshud加载框常量   ——————————————————————————————————————————————————— -->
+    <color name="kprogresshud_default_color">#b1000000</color><!--windons窗体滤镜背景色-->
+    <color name="kprogresshud_grey_color">#449E9E9E</color><!--加载框窗体背景色-->
+
+
+    <!-- —————————————————— 提示框颜色 ——————————————————————————————— -->
+    <!-- 中间提示框 -->
+    <color name="common_prompt_dialog_content_bg">#fff5f5f9</color> <!-- 提示框的背影色 -->
+    <color name="common_prompt_dialog_windowp_bg">#a0000000</color><!-- 提示框的windows背影边框色 -->
+    <color name="common_prompt_dialog_title_color">#8a000000</color> <!-- 提示框按标题色 -->
+    <color name="common_prompt_dialog_content">#383838</color><!-- 提示框按内容色 -->
+    <color name="common_prompt_dialog_title_line">#DCDCDC</color> <!-- 提示框按标题与内容之间的线色 -->
+    <color name="common_prompt_dialog_content_btn_line">#DCDCDC</color><!-- 提示框按内容与按钮之间的线色 -->
+    <color name="common_prompt_dialog_btn">#8a000000</color><!-- 提示框按钮字体色 -->
+    <color name="common_prompt_dialog_btn_normal">#ff85D3EF</color> <!-- 提示框按钮默认色 -->
+    <color name="common_prompt_dialog_btn_pressed">#ffE3E3E3</color> <!-- 提示框按钮点击色 -->
+    <!-- 中间列表提示框 -->
+    <color name="common_prompt_dialog_list_title">#ffffff</color><!-- 提示框按标题色 -->
+    <color name="common_prompt_dialog_list_title_bg">#303030</color><!-- 提示框按标题背景色 -->
+
+
+</resources>

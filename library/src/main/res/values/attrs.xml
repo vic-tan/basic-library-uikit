@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ————————————————————————————————————————— 图片控件点击效果 jnjecion （不适合用代码更改图片切换时用）———————————————————————— -->
+    <color name="default_color">#00000000</color>
+    <declare-styleable name="SelectorInjection">
+        <attr name="in_normal_color" format="color" /><!-- 普通状态的颜色 -->
+        <attr name="in_pressed_color" format="color" /><!-- 按下后的颜色 -->
+        <attr name="in_checked_color" format="color" /><!-- 选中后的颜色 -->
+        <attr name="in_normal_drawable" format="reference" /><!-- 常规状态下-->
+        <attr name="in_pressed_drawable" format="reference" /><!-- 按下/获得焦点 -->
+        <attr name="in_checked_drawable" format="reference" /><!-- 选中时 -->
+        <attr name="in_stroke_color" format="color" /><!-- 边界描边的颜色 -->
+        <attr name="in_stroke_width" format="dimension" /><!-- 外界描边的宽度 -->
+        <attr name="in_pressed_stroke_color" format="color" /><!-- 按下后的描边颜色-->
+        <attr name="in_pressed_stroke_width" format="dimension" /><!-- 按下后的描边宽度-->
+        <attr name="in_checked_stroke_color" format="color" /><!-- 选中后的描边颜色 -->
+        <attr name="in_checked_stroke_width" format="dimension" /><!-- 选中后的描边宽度 -->
+        <attr name="in_isSmart" format="boolean" /><!-- 是否是自动计算的 -->
+        <attr name="in_isSrc" format="boolean" /> <!-- 是否将图片设置到src中 -->
+    </declare-styleable>
+
+
+    <!-- —————————————————————————————————————————— Round 圆角 View  —————————————————————————————————————————— -->
+    <!-- 以下是重用attr的正确姿势,一切为了在布局中可以自动提示--><!-- 圆角矩形背景色 -->
+    <declare-styleable name="RoundTextView">
+        <attr name="rv_backgroundColor" format="color" /><!-- 圆角矩形背景色press -->
+        <attr name="rv_backgroundPressColor" format="color" /><!-- 圆角弧度,单位dp-->
+        <attr name="rv_cornerRadius" format="dimension" /><!-- 圆角弧度,单位dp-->
+        <attr name="rv_strokeWidth" format="dimension" /><!-- 圆角边框颜色-->
+        <attr name="rv_strokeColor" format="color" /><!-- 圆角边框颜色press -->
+        <attr name="rv_strokePressColor" format="color" /><!-- 文字颜色press-->
+        <attr name="rv_textPressColor" format="color" /><!-- 圆角弧度是高度一半-->
+        <attr name="rv_isRadiusHalfHeight" format="boolean" /><!-- 圆角矩形宽高相等,取较宽高中大值-->
+        <attr name="rv_isWidthHeightEqual" format="boolean" /><!-- 圆角弧度,单位dp,TopLeft-->
+        <attr name="rv_cornerRadius_TL" format="dimension" /><!-- 圆角弧度,单位dp,TopRight-->
+        <attr name="rv_cornerRadius_TR" format="dimension" /><!-- 圆角弧度,单位dp,BottomLeft-->
+        <attr name="rv_cornerRadius_BL" format="dimension" /><!-- 圆角弧度,单位dp,BottomRight-->
+        <attr name="rv_cornerRadius_BR" format="dimension" /><!-- 是否有Ripple效果,api21+有效-->
+        <attr name="rv_isRippleEnable" format="boolean" />
+    </declare-styleable>
+
+
+    <!-- ——————————————————————————————————————————ExpandableTextView 伸缩—————————————————————————————————————————— -->
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer" />
+        <attr name="animDuration" format="integer" />
+        <attr name="animAlphaStart" format="float" />
+        <attr name="expandDrawable" format="reference" />
+        <attr name="collapseDrawable" format="reference" />
+        <!-- 点击事件的触发方式 -->
+        <attr name="clickListenerType">
+            <enum name="all" value="0" /> <!-- 点击区域为全部区域,包括TextView和图标 -->
+            <enum name="footer" value="1" /><!-- 点击区域仅为图标区域 -->
+        </attr>
+    </declare-styleable>
+
+    <!-- ——————————————————————————————————————————用LinearLayout实现的ListView，可解决多个ListView并存等问题—————————————————————— -->
+    <declare-styleable name="LinearListView">
+        <attr name="android:entries" />
+        <attr name="dividerThickness" format="dimension" />
+    </declare-styleable>
+
+
+    <!-- ——————————————————————————————————————————CircleIndicator—————————————————————— -->
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_width" format="dimension"/>
+        <attr name="ci_height" format="dimension"/>
+        <attr name="ci_margin" format="dimension"/>
+        <attr name="ci_animator" format="reference"/>
+        <attr name="ci_animator_reverse" format="reference"/>
+        <attr name="ci_drawable" format="reference"/>
+        <attr name="ci_drawable_unselected" format="reference"/>
+
+        <attr name="ci_orientation" format="enum">
+            <!-- 定义了一个水平的小部件 -->
+            <enum name="horizontal" value="0"/>
+            <!-- Defines a vertical widget. -->
+            <enum name="vertical" value="1"/>
+        </attr>
+
+        <attr name="ci_gravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30"/>
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50"/>
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03"/>
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05"/>
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10"/>
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70"/>
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01"/>
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07"/>
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11"/>
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77"/>
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+            the child clipped to its container's bounds.
+            The clip will be based on the vertical gravity: a top gravity will clip the bottom
+            edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80"/>
+            <!-- Additional option that can be set to have the left and/or right edges of
+            the child clipped to its container's bounds.
+            The clip will be based on the horizontal gravity: a left gravity will clip the right
+            edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08"/>
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003"/>
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005"/>
+        </attr>
+
+    </declare-styleable>
+
+</resources>

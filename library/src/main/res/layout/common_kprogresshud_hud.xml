@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tlf.basic.uikit.kprogresshud.BackgroundLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="42px">
+
+    <com.tlf.basic.base.autolayout.AutoFrameLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12px"
+        android:layout_marginTop="24px"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:textSize="42px"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/details_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:textSize="38px"
+        android:visibility="gone"/>
+</com.tlf.basic.uikit.kprogresshud.BackgroundLayout>
