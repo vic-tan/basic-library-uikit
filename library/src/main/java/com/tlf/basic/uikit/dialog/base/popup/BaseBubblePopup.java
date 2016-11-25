@@ -12,7 +12,7 @@ import com.tlf.basic.uikit.R;
 import com.tlf.basic.uikit.dialog.StatusBarUtils;
 import com.tlf.basic.uikit.dialog.internal.InternalBasePopup;
 import com.tlf.basic.uikit.dialog.popu.TriangleView;
-import com.tlf.basic.utils.CornerUtils;
+import com.tlf.basic.uikit.utils.UikitCornerUtils;
 
 /**
  * Use dialog to realize bubble style popup(利用Dialog实现泡泡样式的弹窗)
@@ -76,7 +76,7 @@ public abstract class BaseBubblePopup<T extends BaseBubblePopup<T>> extends Inte
     @Override
     public void setUiBeforShow() {
         mLlContent.setBackgroundDrawable(
-                CornerUtils.cornerDrawable(mBubbleColor, mCornerRadius));
+                UikitCornerUtils.cornerDrawable(mBubbleColor, mCornerRadius));
         mLayoutParams.setMargins(mMarginLeft, 0, mMarginRight, 0);
         mLlContent.setLayoutParams(mLayoutParams);
 

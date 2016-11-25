@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.tlf.basic.base.autolayout.AutoLinearLayout;
 import com.tlf.basic.uikit.R;
 import com.tlf.basic.uikit.dialog.internal.BaseAlertDialog;
-import com.tlf.basic.utils.CornerUtils;
+import com.tlf.basic.uikit.utils.UikitCornerUtils;
 
 
 @SuppressWarnings("deprecation")
@@ -108,9 +108,9 @@ public class NormalDialog extends BaseAlertDialog<NormalDialog> {
         }
 
         /**set background color and corner radius */
-        mTvBtnLeft.setBackgroundDrawable(CornerUtils.btnSelector(mCornerRadius, mBgColor, mBtnPressColor, 0));
-        mTvBtnRight.setBackgroundDrawable(CornerUtils.btnSelector(mCornerRadius, mBgColor, mBtnPressColor, 1));
-        mTvBtnMiddle.setBackgroundDrawable(CornerUtils.btnSelector(mBtnNum == 1 ? mCornerRadius : 0, mBgColor, mBtnPressColor, -1));
+        mTvBtnLeft.setBackgroundDrawable(UikitCornerUtils.btnSelector(mCornerRadius, mBgColor, mBtnPressColor, 0));
+        mTvBtnRight.setBackgroundDrawable(UikitCornerUtils.btnSelector(mCornerRadius, mBgColor, mBtnPressColor, 1));
+        mTvBtnMiddle.setBackgroundDrawable(UikitCornerUtils.btnSelector(mBtnNum == 1 ? mCornerRadius : 0, mBgColor, mBtnPressColor, -1));
         mOnCreateView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

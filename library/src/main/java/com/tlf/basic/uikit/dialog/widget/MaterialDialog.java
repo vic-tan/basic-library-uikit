@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.tlf.basic.base.autolayout.AutoLinearLayout;
 import com.tlf.basic.uikit.R;
 import com.tlf.basic.uikit.dialog.internal.BaseAlertDialog;
-import com.tlf.basic.utils.CornerUtils;
+import com.tlf.basic.uikit.utils.UikitCornerUtils;
 
 
 /**
@@ -55,8 +55,8 @@ public class MaterialDialog extends BaseAlertDialog<MaterialDialog> {
     public void setUiBeforShow() {
         super.setUiBeforShow();
         /**set background color and corner radius */
-        mTvBtnLeft.setBackground(CornerUtils.btnSelector(mCornerRadius, mBgColor, mBtnPressColor, -2));
-        mTvBtnRight.setBackground(CornerUtils.btnSelector(mCornerRadius, mBgColor, mBtnPressColor, -2));
-        mTvBtnMiddle.setBackground(CornerUtils.btnSelector(mCornerRadius, mBgColor, mBtnPressColor, -2));
+        mTvBtnLeft.setBackground(UikitCornerUtils.btnSelector(mCornerRadius, mBgColor, mBtnPressColor, -2));
+        mTvBtnRight.setBackground(UikitCornerUtils.btnSelector(mCornerRadius, mBgColor, mBtnPressColor, -2));
+        mTvBtnMiddle.setBackground(UikitCornerUtils.btnSelector(mCornerRadius, mBgColor, mBtnPressColor, -2));
     }
 }

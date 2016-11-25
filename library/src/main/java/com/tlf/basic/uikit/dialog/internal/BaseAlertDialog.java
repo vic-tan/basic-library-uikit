@@ -12,7 +12,7 @@ import com.tlf.basic.uikit.R;
 import com.tlf.basic.uikit.dialog.WidthScaleConstants;
 import com.tlf.basic.uikit.dialog.base.dialog.BaseDialog;
 import com.tlf.basic.uikit.dialog.listener.OnBtnClickL;
-import com.tlf.basic.utils.CornerUtils;
+import com.tlf.basic.uikit.utils.UikitCornerUtils;
 
 
 public abstract class BaseAlertDialog<T extends BaseAlertDialog<T>> extends BaseDialog<T> {
@@ -216,7 +216,7 @@ public abstract class BaseAlertDialog<T extends BaseAlertDialog<T>> extends Base
             }
         });
 
-        mLlContainer.setBackgroundDrawable(CornerUtils.cornerDrawable(mBgColor, mCornerRadius));
+        mLlContainer.setBackgroundDrawable(UikitCornerUtils.cornerDrawable(mBgColor, mCornerRadius));
     }
 
     /**

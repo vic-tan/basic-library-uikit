@@ -11,7 +11,7 @@ import com.tlf.basic.base.autolayout.utils.AutoUtils;
 import com.tlf.basic.uikit.R;
 import com.tlf.basic.uikit.dialog.WidthScaleConstants;
 import com.tlf.basic.uikit.dialog.base.dialog.BaseDialog;
-import com.tlf.basic.utils.CornerUtils;
+import com.tlf.basic.uikit.utils.UikitCornerUtils;
 
 
 /**
@@ -38,12 +38,12 @@ public abstract class NormalScrollViewDialog extends BaseDialog<NormalScrollView
         mTvExit = (TextView) inflate.findViewById(R.id.tv_exit);
         setSelector(mTvOk);
         setSelector(mTvExit);
-        inflate.setBackground(CornerUtils.cornerDrawable(Color.parseColor("#ffffff"), mContext.getResources().getDimension(R.dimen.common_border_radius)));
+        inflate.setBackground(UikitCornerUtils.cornerDrawable(Color.parseColor("#ffffff"), mContext.getResources().getDimension(R.dimen.common_border_radius)));
         return inflate;
     }
 
     public void setSelector(TextView v) {
-        v.setBackground(CornerUtils.btnSelector((int) mContext.getResources().getDimension(R.dimen.common_border_radius), Color.parseColor("#ffffff"), Color.parseColor("#E3E3E3"), -2));
+        v.setBackground(UikitCornerUtils.btnSelector((int) mContext.getResources().getDimension(R.dimen.common_border_radius), Color.parseColor("#ffffff"), Color.parseColor("#E3E3E3"), -2));
     }
 
 

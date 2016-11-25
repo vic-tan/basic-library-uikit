@@ -23,7 +23,7 @@ import com.tlf.basic.uikit.dialog.WidthScaleConstants;
 import com.tlf.basic.uikit.dialog.base.dialog.BaseDialog;
 import com.tlf.basic.uikit.dialog.bean.DialogMenuItem;
 import com.tlf.basic.uikit.dialog.listener.OnOperItemClickL;
-import com.tlf.basic.utils.CornerUtils;
+import com.tlf.basic.uikit.utils.UikitCornerUtils;
 
 import java.util.ArrayList;
 
@@ -154,7 +154,7 @@ public class NormalListDialog extends BaseDialog<NormalListDialog> {
     public void setUiBeforShow() {
         /** title */
         float radius = mCornerRadius;
-        mTvTitle.setBackgroundDrawable(CornerUtils.cornerDrawable(mTitleBgColor, new float[]{radius, radius, radius,
+        mTvTitle.setBackgroundDrawable(UikitCornerUtils.cornerDrawable(mTitleBgColor, new float[]{radius, radius, radius,
                 radius, 0, 0, 0, 0}));
         mTvTitle.setText(mTitle);
         mTvTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, mTitleTextSize);
@@ -166,10 +166,10 @@ public class NormalListDialog extends BaseDialog<NormalListDialog> {
         mLv.setDividerHeight(mDividerHeight);
 
         if (mIsTitleShow) {
-            mLv.setBackgroundDrawable(CornerUtils.cornerDrawable(mLvBgColor, new float[]{0, 0, 0, 0, radius, radius, radius,
+            mLv.setBackgroundDrawable(UikitCornerUtils.cornerDrawable(mLvBgColor, new float[]{0, 0, 0, 0, radius, radius, radius,
                     radius}));
         } else {
-            mLv.setBackgroundDrawable(CornerUtils.cornerDrawable(mLvBgColor, radius));
+            mLv.setBackgroundDrawable(UikitCornerUtils.cornerDrawable(mLvBgColor, radius));
         }
 
         if (mAdapter == null) {
@@ -323,10 +323,10 @@ public class NormalListDialog extends BaseDialog<NormalListDialog> {
             tvItem.setTextColor(mItemTextColor);
             tvItem.setTextSize(TypedValue.COMPLEX_UNIT_PX, mItemTextSize);
             if (mIsTitleShow) {
-                llItem.setBackgroundDrawable((CornerUtils.listItemSelector(mCornerRadius, Color.TRANSPARENT, mItemPressColor,
+                llItem.setBackgroundDrawable((UikitCornerUtils.listItemSelector(mCornerRadius, Color.TRANSPARENT, mItemPressColor,
                         position == mContents.size() - 1)));
             } else {
-                llItem.setBackgroundDrawable(CornerUtils.listItemSelector(mCornerRadius, Color.TRANSPARENT, mItemPressColor,
+                llItem.setBackgroundDrawable(UikitCornerUtils.listItemSelector(mCornerRadius, Color.TRANSPARENT, mItemPressColor,
                         mContents.size(), position));
             }
 

@@ -33,7 +33,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.vic-tan:basic-library-base:1.0.0'
-    compile 'com.vic-tan:basic-library-utils:1.0.1'
     testCompile 'junit:junit:4.12'
 }
 
@@ -42,7 +41,7 @@ publish {
     userOrg = 'vic-tan'//bintray.com用户名
     groupId = 'com.vic-tan'//jcenter上的路径
     artifactId = 'basic-library-uikit'//项目名称
-    publishVersion = '1.0.0'//版本号
+    publishVersion = '1.0.1'//版本号
     desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
     website = 'https://github.com/vic-tan/basic-library-uikit'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }

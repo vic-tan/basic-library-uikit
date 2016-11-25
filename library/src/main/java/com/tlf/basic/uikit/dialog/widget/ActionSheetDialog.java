@@ -25,7 +25,7 @@ import com.tlf.basic.uikit.dialog.WidthScaleConstants;
 import com.tlf.basic.uikit.dialog.base.dialog.BottomBaseDialog;
 import com.tlf.basic.uikit.dialog.bean.DialogMenuItem;
 import com.tlf.basic.uikit.dialog.listener.OnOperItemClickL;
-import com.tlf.basic.utils.CornerUtils;
+import com.tlf.basic.uikit.utils.UikitCornerUtils;
 
 import java.util.ArrayList;
 
@@ -147,7 +147,7 @@ public class ActionSheetDialog extends BottomBaseDialog<ActionSheetDialog> {
         /** title */
         float radius = mCornerRadius;
         //mTvTitle.setHeight(mTitleHeight);
-        mTvTitle.setBackgroundDrawable(CornerUtils.cornerDrawable(mTitleBgColor, new float[]{radius, radius, radius,
+        mTvTitle.setBackgroundDrawable(UikitCornerUtils.cornerDrawable(mTitleBgColor, new float[]{radius, radius, radius,
                 radius, 0, 0, 0, 0}));
         mTvTitle.setText(mTitle);
         mTvTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, mTitleTextSize);
@@ -164,7 +164,7 @@ public class ActionSheetDialog extends BottomBaseDialog<ActionSheetDialog> {
         mTvCancel.setText(mCancelText);
         mTvCancel.setTextSize(TypedValue.COMPLEX_UNIT_PX, mCancelTextSize);
         mTvCancel.setTextColor(mCancelTextColor);
-        mTvCancel.setBackgroundDrawable(CornerUtils.listItemSelector(radius, mLvBgColor, mItemPressColor, 1, 0));
+        mTvCancel.setBackgroundDrawable(UikitCornerUtils.listItemSelector(radius, mLvBgColor, mItemPressColor, 1, 0));
 
         mTvCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -178,10 +178,10 @@ public class ActionSheetDialog extends BottomBaseDialog<ActionSheetDialog> {
         mLv.setDividerHeight(mDividerHeight);
 
         if (mIsTitleShow) {
-            mLv.setBackgroundDrawable(CornerUtils.cornerDrawable(mLvBgColor, new float[]{0, 0, 0, 0, radius, radius, radius,
+            mLv.setBackgroundDrawable(UikitCornerUtils.cornerDrawable(mLvBgColor, new float[]{0, 0, 0, 0, radius, radius, radius,
                     radius}));
         } else {
-            mLv.setBackgroundDrawable(CornerUtils.cornerDrawable(mLvBgColor, radius));
+            mLv.setBackgroundDrawable(UikitCornerUtils.cornerDrawable(mLvBgColor, radius));
         }
 
         if (mAdapter == null) {
@@ -340,10 +340,10 @@ public class ActionSheetDialog extends BottomBaseDialog<ActionSheetDialog> {
             tvItem.setGravity(Gravity.CENTER);
             tvItem.setTextSize(TypedValue.COMPLEX_UNIT_PX, mItemTextSize);
             if (mIsTitleShow) {
-                llItem.setBackgroundDrawable((CornerUtils.listItemSelector(mCornerRadius, Color.TRANSPARENT, mItemPressColor,
+                llItem.setBackgroundDrawable((UikitCornerUtils.listItemSelector(mCornerRadius, Color.TRANSPARENT, mItemPressColor,
                         position == mContents.size() - 1)));
             } else {
-                llItem.setBackgroundDrawable(CornerUtils.listItemSelector(mCornerRadius, Color.TRANSPARENT, mItemPressColor,
+                llItem.setBackgroundDrawable(UikitCornerUtils.listItemSelector(mCornerRadius, Color.TRANSPARENT, mItemPressColor,
                         mContents.size(), position));
             }
 
