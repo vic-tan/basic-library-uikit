@@ -2,8 +2,6 @@ package com.tlf.basic.uikit;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -12,6 +10,6 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+        String key_one ="./gradlew clean build bintrayUpload -PbintrayUser=vic-tan -PbintrayKey=8970dbd317d720d9b1176877f90c9bd6a431e650 -PdryRun=false";
     }
 }
