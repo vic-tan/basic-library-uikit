@@ -31,14 +31,16 @@
     <TextView
         android:id="@+id/mTvContent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:paddingBottom="55px"
+        android:paddingBottom="15px"
         android:paddingLeft="35px"
-        android:paddingRight="35px"
-        android:paddingTop="65px"
+        android:paddingRight="15px"
+        android:paddingTop="15px"
+        android:maxLines="15"
+        android:scrollbars="vertical"
         android:textColor="@color/common_prompt_dialog_content"
-        android:textSize="@dimen/common_dialog_content_size" />
+        android:textSize="@dimen/common_dialog_content_size"/>
 
     <View
         android:id="@+id/mVLineHorizontal"

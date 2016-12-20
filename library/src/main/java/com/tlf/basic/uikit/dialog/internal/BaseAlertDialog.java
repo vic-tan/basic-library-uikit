@@ -2,6 +2,7 @@ package com.tlf.basic.uikit.dialog.internal;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.text.method.ScrollingMovementMethod;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -161,7 +162,7 @@ public abstract class BaseAlertDialog<T extends BaseAlertDialog<T>> extends Base
         mTvContent.setTextColor(mContentTextColor);
         mTvContent.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContentTextSize);
         mTvContent.setLineSpacing(0, WidthScaleConstants.DIALOG_WONDWON_CONTENT_LINE_SPACING);
-
+        mTvContent.setMovementMethod(ScrollingMovementMethod.getInstance());
 
         /**btns*/
         mTvBtnLeft.setText(mBtnLeftText);
